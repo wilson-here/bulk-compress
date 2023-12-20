@@ -23,6 +23,17 @@ const isFile = (file) => {
   return fs.lstatSync(file).isFile();
 };
 
+const compressImage = (oldFilePath, newFilePath, size) => {
+  sharp(oldFilePath)
+    .resize(size)
+    .toFile(newFilePath, (err) => {
+      if (err) {
+        console.log(err);
+        return;
+      }
+    });
+};
+
 fs.readdirSync(inputDir)
   .map((file) => {
     return path.join(inputDir, file);
@@ -35,19 +46,8 @@ fs.readdirSync(inputDir)
       `${fileData.name}-min${fileData.ext}`
     );
 
-    const compressImage = () => {
-      sharp(file)
-        .resize(50)
-        .toFile(newFilePath, (err) => {
-          if (err) {
-            console.log(err);
-            return;
-          }
-        });
-    };
-
     if (!supportedImageFile.includes(fileData.ext)) return;
     if (fileData.name.includes("min")) return;
 
-    compressImage();
+    compressImage(file, newFilePath, 50);
   });
