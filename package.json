@@ -1,5 +1,30 @@
 {
   "dependencies": {
     "sharp": "^0.33.1"
-  }
+  },
+  "bin": {
+    "bulk-compress": "bin/index.js"
+  },
+  "name": "bulk-compress",
+  "description": "a CLI app to bulk compress the images inside a folder (supported image type: jpeg, png, webp, avif, gif, svg, tiff)",
+  "version": "1.0.0",
+  "main": "bin/index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wilson-here/bulk-compress.git"
+  },
+  "keywords": [
+    "bulk-compress",
+    "image-compress"
+  ],
+  "author": "wilson-here",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wilson-here/bulk-compress/issues"
+  },
+  "homepage": "https://github.com/wilson-here/bulk-compress#readme"
 }

@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const inputDir = process.argv[2];
 const outputDir = process.argv[3];
 
