@@ -7,7 +7,7 @@ a CLI app to bulk compress the images inside a folder (supported image type: jpe
 ## Installation
 
 ```bash
-npm i bulk-compress
+npm i -g bulk-compress
 ```
 
 ## Usage
